@@ -8,7 +8,7 @@
 
 
 
-Phoca Cart View - Heureka.cz Conversion Plugin - plugin that adds the Heureka conversion code when the order is successfully completed in Phoca Cart
+Phoca Cart View - Heureka.cz Conversion Tracking Plugin - plugin that adds the Heureka.cz conversion tracking code when the order is successfully completed in Phoca Cart
 
 
 

@@ -30,40 +30,44 @@ class plgPCVHeureka_conversion extends CMSPlugin
 
 		$p = [];
 		$p['heureka_key'] = $this->params->get('heureka_key', '');
-		
-		$order = PhocacartOrder::getOrder($infoData['order_id'], $infoData['order_token'], $infoData['user_id']);
 
-		if (isset($order['id']) && (int)$order['id'] > 0 && $infoAction != 5) {
-			$orderProducts = PhocacartOrder::getOrderProducts($order['id']);
+		if (!isset($infoData['user_id'])) { $infoData['user_id'] = 0;}
 
-			if (!empty($orderProducts)) {
+		if (isset($infoData['order_id']) && (int)$infoData['order_id'] > 0 && isset($infoData['order_token']) && $infoData['order_token'] != '') {
+			$order = PhocacartOrder::getOrder($infoData['order_id'], $infoData['order_token'], $infoData['user_id']);
 
-				$price = new PhocacartPrice();
+			if (isset($order['id']) && (int)$order['id'] > 0 && $infoAction != 5) {
+				$orderProducts = PhocacartOrder::getOrderProducts($order['id']);
+
+				if (!empty($orderProducts)) {
+
+					$price = new PhocacartPrice();
 
 
-				$s = [];
-				$s[] = 'var _hrq = _hrq || [];';
-				$s[] = '_hrq.push([\'setKey\', \''.addslashes(trim(strip_tags($p['heureka_key']))).'\']);';
-				$s[] = '_hrq.push([\'setOrderId\', \''. (int)$order['id'].'\']);';
+					$s   = [];
+					$s[] = 'var _hrq = _hrq || [];';
+					$s[] = '_hrq.push([\'setKey\', \'' . addslashes(trim(strip_tags($p['heureka_key']))) . '\']);';
+					$s[] = '_hrq.push([\'setOrderId\', \'' . (int)$order['id'] . '\']);';
 
-				foreach ($orderProducts as $k => $v) {
-					$productPrice  = $price->getPriceFormatRaw($v['brutto'], 0, 0, 0, 2, '.', '');
+					foreach ($orderProducts as $k => $v) {
+						$productPrice = $price->getPriceFormatRaw($v['brutto'], 0, 0, 0, 2, '.', '');
 
-					$s[] = '_hrq.push([\'addProduct\', \''.addslashes($v['title']).'\',\''.$productPrice.'\',\''. (int)$v['quantity'].'\',\''. (int)$v['id'].'\']);';
+						$s[] = '_hrq.push([\'addProduct\', \'' . addslashes($v['title']) . '\',\'' . $productPrice . '\',\'' . (int)$v['quantity'] . '\',\'' . (int)$v['id'] . '\']);';
+					}
+
+					$s[] = '_hrq.push([\'trackOrder\']);';
+
+					$s[] = '(function() {';
+					$s[] = '	var ho = document.createElement(\'script\');';
+					$s[] = '	ho.type = \'text/javascript\'; ho.async = true;';
+					$s[] = '	ho.src = \'https://im9.cz/js/ext/1-roi-async.js\';';
+					$s[] = '	var s = document.getElementsByTagName(\'script\')[0];';
+					$s[] = '	s.parentNode.insertBefore(ho, s);';
+					$s[] = '})();';
+
+					Factory::getDocument()->addScriptDeclaration(implode("\n", $s));
+
 				}
-
-				$s[] = '_hrq.push([\'trackOrder\']);';
-
-				$s[] = '(function() {';
-				$s[] = '	var ho = document.createElement(\'script\');';
-				$s[] = '	ho.type = \'text/javascript\'; ho.async = true;';
-				$s[] = '	ho.src = \'https://im9.cz/js/ext/1-roi-async.js\';';
-				$s[] = '	var s = document.getElementsByTagName(\'script\')[0];';
-				$s[] = '	s.parentNode.insertBefore(ho, s);';
-				$s[] = '})();';
-
-				Factory::getDocument()->addScriptDeclaration(implode("\n", $s));
-
 			}
 		}
 

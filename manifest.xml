@@ -1,7 +1,7 @@
 <updates>
 	<update>
 		<name><![CDATA[ Phoca Cart View Heureka.cz Conversion Plugin ]]></name>
-		<description><![CDATA[ Phoca Cart View - Heureka.cz Conversion Plugin - plugin that adds the Heureka conversion code when the order is successfully completed in Phoca Cart ]]></description>
+		<description><![CDATA[ Phoca Cart View - Heureka.cz Conversion Tracking Plugin - plugin that adds the Heureka.cz conversion tracking code when the order is successfully completed in Phoca Cart ]]></description>
 		<element>heureka_conversion</element>
 		<folder>pcv</folder>
 		<type>plugin</type>
