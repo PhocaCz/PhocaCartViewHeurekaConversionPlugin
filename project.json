@@ -1,0 +1,19 @@
+{
+	"author": "Jan Pavelka (www.phoca.cz)",
+	"authorUrl": "https://www.phoca.cz",
+	"copyright": "Jan Pavelka",
+	"license": "GNU/GPL",
+	"projectName": "PhocaCartViewHeurekaConversionPlugin",
+	"extensionName": "Phoca Cart View Heureka Conversion Plugin",
+	"projectInitials" : "PC",				  
+	"description": "Phoca Cart View - Heureka Conversion Plugin - plugin that adds the Heureka conversion code when the order is successfully completed in Phoca Cart",
+	"projectUrl": "https://www.phoca.cz/phocacart-extensions/2-plugins/73-phoca-cart-view-heureka-conversion-plugin",
+	"projectDocumentationUrl": "https://www.phoca.cz/documentation/category/115-phoca-cart",
+	"projectMainComponent": "Phoca Cart",
+	"projectMainComponentInfoUrl": "https://www.phoca.cz/project/phocacart-joomla-ecommerce",
+	"projectDemo" : {
+		"Joomla! - Phoca Cart Demo": "https://www.phoca.cz/phocacart4demo/"
+	},
+	"projectColor": "#129ed9",
+	"projectBranch": "main"
+}
