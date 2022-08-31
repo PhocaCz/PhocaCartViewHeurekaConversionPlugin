@@ -2,19 +2,19 @@
 
 
 
-![Phoca Cart View Heureka Conversion Plugin](https://github.com/PhocaCz/PhocaCartViewHeurekaConversionPlugin/blob/main/heureka_conversion.png?raw=true)
+![Phoca Cart View Heureka.cz Conversion Plugin](https://github.com/PhocaCz/PhocaCartViewHeurekaConversionPlugin/blob/main/heureka_conversion.png?raw=true)
 
-# Phoca Cart View Heureka Conversion Plugin
+# Phoca Cart View Heureka.cz Conversion Plugin
 
 
 
-Phoca Cart View - Heureka Conversion Plugin - plugin that adds the Heureka conversion code when the order is successfully completed in Phoca Cart
+Phoca Cart View - Heureka.cz Conversion Plugin - plugin that adds the Heureka conversion code when the order is successfully completed in Phoca Cart
 
 
 
 ## Project page
 
-[Phoca Cart View Heureka Conversion Plugin](https://www.phoca.cz/phocacart-extensions/2-plugins/73-phoca-cart-view-heureka-conversion-plugin)
+[Phoca Cart View Heureka.cz Conversion Plugin](https://www.phoca.cz/phocacart-extensions/2-plugins/73-phoca-cart-view-heureka-conversion-plugin)
 
 [Phoca Cart Info Page](https://www.phoca.cz/project/phocacart-joomla-ecommerce)
 
