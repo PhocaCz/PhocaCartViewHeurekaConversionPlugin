@@ -30,15 +30,14 @@
 		</languages>
 	</administration>
 	<form>
-	<fields name="params" addfieldpath="/administrator/components/com_phocacart/models/fields">
-	<fieldset name="shipping" addpath="/administrator/components/com_phocacart/models/fields" group="pcv">
+		<config>
+			<fields name="params" addfieldpath="/administrator/components/com_phocacart/models/fields">
+			<fieldset name="basic" label="PLG_CONTENT_PHOCA_OPEN_GRAPH_ARTICLE_OPTIONS" group="pcv">
+				<field name="heureka_key" type="text" default="" class="inputbox" size="40" label="PLG_PCV_HEUREKA_CONVERSION_FIELD_PUBLIC_KEY_LABEL" description="PLG_PCV_HEUREKA_CONVERSION_FIELD_PUBLIC_KEY_DESC"/>
 
-		<field name="heureka_key" type="text" default="" class="inputbox" size="40" label="PLG_PCV_HEUREKA_CONVERSION_FIELD_PUBLIC_KEY_LABEL" description="PLG_PCV_HEUREKA_CONVERSION_FIELD_PUBLIC_KEY_DESC"/>
-
-
-	
-	</fieldset>
-	</fields>
+			</fieldset>
+			</fields>
+		</config>
 
 </form>
 	
