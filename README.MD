@@ -2,7 +2,7 @@
 
 
 
-![Phoca Cart View Heureka.cz Conversion Plugin](https://github.com/PhocaCz/PhocaCartViewHeurekaConversionPlugin/blob/main/heureka_conversion.png?raw=true)
+![Phoca Cart View Heureka.cz Conversion Plugin](https://github.com/PhocaCz/PhocaCartViewHeurekaConversionPlugin/blob/main/heureka_cz_conversion.png?raw=true)
 
 # Phoca Cart View Heureka.cz Conversion Plugin
 

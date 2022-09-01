@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="pcv" method="upgrade" version="4.0">
+	<name>plg_pcv_heureka_cz_conversion</name>
+	<author>Jan Pavelka (www.phoca.cz)</author>
+	<creationDate>01/09/2022</creationDate>
+	<authorEmail></authorEmail>
+	<authorUrl>https://www.phoca.cz</authorUrl>
+	<copyright>Jan Pavelka</copyright>
+	<license>GNU/GPL</license>
+	<version>4.0.4</version>
+	<description>PLG_PCV_HEUREKA_CZ_CONVERSION_DESCRIPTION</description>
+	<projectName>PhocaCartViewHeurekaConversionPlugin</projectName>
+
+	<files>
+		<folder>helpers</folder>
+		<filename plugin="heureka_cz_conversion">index.html</filename>
+		<filename plugin="heureka_cz_conversion">heureka_cz_conversion.php</filename>
+		<filename plugin="heureka_cz_conversion">manifest.xml</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_pcv_heureka_cz_conversion.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_pcv_heureka_cz_conversion.sys.ini</language>
+	</languages>
+
+	<administration>
+		<languages>
+			<language tag="en-GB">language/en-GB/en-GB.plg_pcv_heureka_cz_conversion.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.plg_pcv_heureka_cz_conversion.sys.ini</language>
+		</languages>
+	</administration>
+	<form>
+		<config>
+			<fields name="params" addfieldpath="/administrator/components/com_phocacart/models/fields">
+			<fieldset name="basic" label="PLG_PCV_HEUREKA_CZ_CONVERSION_BASIC_OPTIONS" group="pcv">
+				<field name="heureka_key" type="text" default="" class="inputbox" size="40" label="PLG_PCV_HEUREKA_CZ_CONVERSION_FIELD_PUBLIC_KEY_LABEL" description="PLG_PCV_HEUREKA_CZ_CONVERSION_FIELD_PUBLIC_KEY_DESC"/>
+
+				<field name="currency_id" type="PhocacartCurrency" label="PLG_PCV_HEUREKA_CZ_CONVERSION_FIELD_CURRENCY_LABEL" description="PLG_PCV_HEUREKA_CZ_CONVERSION_FIELD_CURRENCY_DESC" class="form-select" default="0"/>
+			</fieldset>
+			</fields>
+		</config>
+
+</form>
+	
+
+	<updateservers>
+		<server type="extension" name="PLG_PCV_HEUREKA_CZ_CONVERSION" priority="1"><![CDATA[https://raw.githubusercontent.com/PhocaCz/PhocaCartViewHeurekaConversionPlugin/main/manifest.xml]]></server>
+	</updateservers>
+</extension>
