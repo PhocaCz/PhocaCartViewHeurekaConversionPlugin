@@ -63,7 +63,7 @@ class plgPCVHeureka_cz_conversion extends CMSPlugin
 					foreach ($orderProducts as $k => $v) {
 						$productPrice = $price->getPriceFormatRaw($v['brutto'], 0, 0, $forceCurrency, 2, '.', '');
 
-						$s[] = '_hrq.push([\'addProduct\', \'' . addslashes($v['title']) . '\',\'' . $productPrice . '\',\'' . (int)$v['quantity'] . '\',\'' . (int)$v['id'] . '\']);';
+						$s[] = '_hrq.push([\'addProduct\', \'' . addslashes($v['title']) . '\',\'' . $productPrice . '\',\'' . (int)$v['quantity'] . '\',\'' . (int)$v['product_id'] . '\']);';
 					}
 
 					$s[] = '_hrq.push([\'trackOrder\']);';
